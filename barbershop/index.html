@@ -65,12 +65,65 @@
 				<a class="btn" href="#">Все новости</a>
 			</div>
 			<div class="index-content-right">
-				<h2 class="index-content-title"></h2>
+				<h2 class="index-content-title">Фотогалерея</h2>
+				<div class="gallery">
+					<figure class="gallery-content">
+						<img src="img/photo-1.jpg" alt="" width="286" height="164">
+					</figure>
+					<button class="btn gallery-prev">Назад</button>
+					<button class="btn gallery-next">Вперёд</button>
+				</div>
 			</div>			
 		</div>
+		<div class="index-content">
+			<div class="index-content-left">
+				<h2 class="index-content-title">Контактная информация</h2>
+				<p>
+					Барбершоп "Бородинский"<br>
+					Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+					Телефон: +7 (812) 666-02-66
+				</p>
+				<p>
+					пн - пт: с 10:00 до 22:00<br>
+					сб - вс: с 10:00 до 19:00
+				</p>
+				<a class="btn" href="#">Как проехать</a>
+				<a class="btn" href="#">Обратная связь</a>
+			</div>
+			<div class="index-content-right">
+				<h2 class="index-content-title">Записаться</h2>
+				<p>
+					Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+				</p>
+				<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+					<input type="text" name="date" value="" placeholder="Дата">
+					<input type="text" name="time" value="" placeholder="Время">
+					<input type="text" name="name" value="" placeholder="Ваше имя">
+					<input type="tel" name="phone" value="" placeholder="Телефон">
+					<input class="btn" type="submit">
+				</form>
+			</div>			
+		</div>		
 	</main>
 	<footer class="main-footer">
-		
+		<div class="container">
+			<section class="footer-contacts">
+				Барбершоп "Бородинский"<br>
+				Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+				<a href="#">Как нас найти?</a><br>
+				Телефон: +7 (812) 666-02-66				
+			</section>
+			<section class="footer-social">
+				<p>Давайте дружить!</p>
+				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+			</section>
+			<section class="footer-copyright">
+				<p>Разработано:</p>
+				<a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+			</section>			
+		</div>
 	</footer>
 </body>
 </html>
