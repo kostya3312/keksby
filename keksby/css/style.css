@@ -524,6 +524,10 @@ body {
   font: inherit;
   color: inherit;
   border: 2px solid #d5d5d5;
+  width: 100%;
+  padding: 9px 15px;
+  height: 54px;
+  box-sizing: border-box;  
 }
 
 .feedback-form input[type="text"]:hover, 
@@ -538,8 +542,46 @@ body {
   border-color: #8d745a;
 }
 
+.feedback-form textarea {
+  display: block;
+  min-height: 120px;
+}
+
+.feedback-form-group-left-part {
+  float: left;
+  width: 290px;
+}
+
+.feedback-form-group-right-part {
+  float: right;
+  width: 290px;  
+}
+
 .checkbox-area {
   border-bottom: 1px solid #d5d5d5;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 17px;
+}
+
+.checkbox-area input[type="checkbox"] {
+  margin: 0;
+  margin-right: 5px;
+}
+
+.feedback-form .btn {
+  margin-top: 40px;
+  background-color: #a38b70;
+  color: white;
+}
+
+.feedback-form .btn:hover {  
+  background-color: #8d745a;
+}
+
+.feedback-form .btn:active {  
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .page-footer {
@@ -561,13 +603,18 @@ body {
     height: 55px;
 }
 
+.footer-logo img {
+    width: 205px;
+    height: 55px;
+}
+
 .footer-middle {
     padding-top: 50px;    
     padding-bottom: 50px;
 }
 
 .footer-bottom {
-    margin-top: 50px;    
+   padding-top: 50px;    
 }
 
 .footer-middle,
@@ -586,10 +633,18 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #a38b70;
+  margin: 0;
+  margin-bottom: 20px;  
 }
 
 .footer-menu ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 15px;
 }
 
 .footer-menu a {
@@ -609,12 +664,14 @@ body {
 .footer-social {
     float: left;
     width: 490px;
+    font-size: 0;
 }
 
 .footer-social b {
   font-family: "Georgia", serif;
   font-size: 24px;
   color: #a38b70;
+  margin-right: 40px;
 }
 
 .footer-social a {
@@ -626,8 +683,41 @@ body {
   text-transform: uppercase;
   float: right;
   width: 236px;
+  margin-top: 17px;  
 }
 
+.social-btn {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.social-btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn:active {
+  border-color: #ffffff;
+  opacity: 0.1;
+}
+
+
+.social-btn-vk {
+    background-position: 16px -238px;
+}
+
+.social-btn-fb {
+    background-position: 19px -297px;
+}
+
+.social-btn-in {
+    background-position: 13px -358px;
+}
+   
 .footer-copyright a {
   color: #ffffff;
   text-decoration: none;
@@ -639,4 +729,13 @@ body {
 
 .footer-copyright a:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.heart {
+  display: inline-block;
+  background: url("../img/sprite.png") no-repeat -5px -419px;
+  width: 27px;
+  height: 24px;
+  font-size: 0;
+  vertical-align: middle;
 }
