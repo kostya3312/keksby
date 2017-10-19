@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Бронирование</title>
+  <link rel="stylesheet" href="fonts/anahit/anahit.css">
+  <link rel="stylesheet" href="fonts/notoserif/notoserif.css">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="booking-page">
+  <div class="wrapper">
+    <header>
+      <h1>Отель Cosmo Shambala Estate</h1>
+      <ul class="navigation">
+        <li><a class="to-main" href="index.html">Главная</a></li>
+        <li><a class="to-price" href="price.html">Цены</a></li>
+        <li><a class="to-photo" href="photo.html">Фотогалерея</a></li>
+        <li><a class="to-booking" href="booking.html">Бронирование</a></li>
+        <li><a class="to-contacts" href="contacs.html">Контакты</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <form action="some_script.php">
+        <h2>Основные данные</h2>
+        <div class="main-form-item">
+          <label for="name">ФИО:</label>
+          <input type="text" name="fio" id="name" required>
+        </div>
+        <div class="main-form-item">
+          <label for="email">E-MAIL:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="main-form-item">
+          <label for="phone">Телефон:</label>
+          <input type="tel" name="phone" id="phone" required>
+        </div>
+        <div class="main-form-item">
+          <label for="date_in">Дата заезда:</label>
+          <input type="date" name="date_in" id="date_in" required>
+        </div>
+        <div class="main-form-item">
+          <label for="date_out">Дата отъезда:</label>
+          <input type="date" name="date_out" id="date_out" required>
+        </div>
+        <div class="main-form-item">
+          <label for="type_room">Тип номера:</label>
+          <select name="type_room" id="type_room">
+            <option value="1">1-местный</option>
+            <option value="2">2-местный</option>
+            <option value="3">3-местный</option>
+            <option value="4">4-местный</option>
+          </select>
+        </div>
+        <div class="main-form-item form-quantity">
+          <label for="adults">Количество взрослых:</label>
+          <select name="adults" id="adults">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="main-form-item form-quantity">
+          <label for="kids">Количество детей:</label>
+          <select name="kids" id="kids">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <h2>Тип поездки</h2>
+        <input type="radio" id="type_business" name="type_trip" checked>
+        <label for="type_business">бизнес</label>
+        <br>
+
+        <input type="radio" id="type_rest" name="type_trip">
+        <label for="type_rest">отдых</label>
+        <br>
+
+        <h2>Оцпии</h2>
+        <input type="checkbox" id="option_1" name="option_1">
+        <label for="option_1">трансфер до аэропорта</label>
+        <br>
+
+        <input type="checkbox" id="option_2" name="option_2">
+        <label for="option_2">аренда скутера</label>
+        <br>
+
+        <input type="checkbox" id="option_3" name="option_3">
+        <label for="option_3">аренда авто</label>
+        <br><br>
+
+        <label for="comment">Комментарий: </label>
+        <br>
+
+        <textarea name="comment" id="comment" cols="50" rows="10" placeholder="Ваши пожелания ..."></textarea>
+        <br><br>
+
+        <input type="submit" value="Забронировать">
+      </form>
+    </main>
+
+    <p><a href="#top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>Наверх</a></p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+body {
+	font-family: 'Noto Serif';	
+	font-size: 16px;
+	line-height: 28px;
+	background-image: url(../img/bg-2.png);
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'AMG Anahit';
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+.navigation {	
+	list-style: none;
+	font-family: "AMG Anahit";
+	font-size: 20px;
+	background-color: rgba(0,0,0,0.3);
+	padding: 0;
+	margin-bottom: 50px;
+}
+
+.navigation a {
+	display: inline-block;		
+	color: white;
+	text-decoration: none;
+	box-sizing: border-box;
+	width: 180px;	
+	padding: 5px;	
+}
+
+.navigation li {	
+	display: inline-block;
+}
+
+a {
+	color: DodgerBlue;
+	transition: all .5s;
+}
+
+a:hover {
+	color: OrangeRed;
+}
+
+a:focus {
+	color: OrangeRed;
+}
+
+a:active {
+	color: Crimson;
+}
+
+#main-page .to-main,
+#photo-page .to-photo,
+#price-page .to-price,
+#booking-page .to-booking,
+#contacts-page .to-contacts {
+	background-color: black;
+}
+
+dt {
+	font-family: "AMG Anahit";
+	color: SaddleBrown;
+}
+
+.img_desc {
+	display: block;
+	margin: 0 auto;
+}
+
+img {
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #2f4f4f; 
+}
+
+.photo_block {
+	width: 940px;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+.photo_block img {
+	box-sizing: border-box;
+	width: 300px;
+	height: auto;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 5px 10px SteelBlue; 
+}
+
+.photo_block img:nth-child(3n) {
+	margin-right: 0;
+}
+
+p {
+	text-align: justify;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+}
+
+main h2 {
+	padding-left: 40px;
+	position: relative;
+	background-image: url(../img/hotel-icon.png);	
+	background-size: 30px;	
+	background-repeat: no-repeat;
+}
+
+main h2::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.fa-arrow-circle-up {
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+a[href="#top"] {
+	text-decoration: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;	
+}
+
+td, th {
+	border: 2px solid SaddleBrown;
+	padding: 5px 10px;
+	font-size: 18px;	
+	background-color: rgba(255,255,255,.7);
+}
+
+th {
+	font-size: 20px;
+}
+
+.room-type {
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: bold;
+	background-color: SandyBrown;
+}
+
+.additional-place {
+	font-size: 15px;
+}
+
+label {
+	cursor: pointer;
+	font-size: 18px;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="radio"] + label {
+	position: relative;
+	padding-left: 30px;
+}
+
+input[type="radio"] + label:before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-color: SandyBrown;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -7px;
+	border: 3px solid SandyBrown;
+	box-sizing: border-box;
+	border-radius: 50%;
+	box-shadow: 0 0 0px 3px black;
+}
+
+input[type="radio"]:checked + label:before {
+	background-color: black;
+}
+
+input[type="checkbox"] + label {
+	position: relative;
+	padding-left: 30px;
+}
+
+input[type="checkbox"] + label:before {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-color: SandyBrown;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -7px;
+	border: 3px solid SandyBrown;
+	box-sizing: border-box;
+	box-shadow: 0 0 0px 4px black;
+}
+
+input[type="checkbox"]:checked + label:before {
+	background-color: black;
+}
+
+.main-form-item {
+	margin-bottom: 10px;
+}
+
+.main-form-item label {
+	display: inline-block;
+	width: 250px;
+}
+
+select,
+input[type="date"] {
+	cursor: pointer;
+}
+
+.main-form-item input,
+.main-form-item select {
+	padding: 5px;
+	font-size: 16px;
+	width: 200px;
+	box-sizing: border-box;
+}
+
+textarea {
+	padding: 10px;
+	font-size: 18px;
+}
+
+.form-quantity select {
+	width: auto;
+}
+
+form h2 {
+	margin-top: 40px;
+}
+
+input[type="submit"] {
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
