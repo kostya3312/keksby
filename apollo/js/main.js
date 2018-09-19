@@ -40,4 +40,44 @@ $(document).ready(function() {
             $button.removeClass('navigation__button--active');
         }
     });
+
+    // owlcarousel
+    $('.slider__slides').slick({
+        dots: false,
+        arrows: true,
+        prevArrow: $('.slider__arrow--prev'),
+        nextArrow: $('.slider__arrow--next'),
+        appendDots: '.slider__dots',
+        customPaging : function(slider, i) {
+            return "<div class='slider__dots-item'></div>";
+        },
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    dots: true
+                }
+            }
+        ]
+    });
+
+    // pagescroll2id
+    $(".navigation a").mPageScroll2id({
+        offset: 65
+    });
+
+    // sticky nav bar
+    var $nav = $('.header__navigation');
+    var navTopPos = $nav.offset().top;
+    var $window = $(window);
+    $window.scroll(function() {
+        $nav.toggleClass('header__navigation--sticky', $window.scrollTop() > navTopPos);
+    });
 });
