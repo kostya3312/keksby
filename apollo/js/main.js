@@ -2,6 +2,8 @@ $(document).ready(function() {
     $nav = $('.navigation');
     $menu = $('.navigation__list');
     $button = $('#navigation-button');
+    $headerNav = $('.header__navigation');
+
 
     $button.click(function () {
         $menu.slideToggle('fast', function () {
@@ -10,6 +12,7 @@ $(document).ready(function() {
             }
         });
         $(this).toggleClass('navigation__button--active');
+        $headerNav.toggleClass('header__navigation--active');
     });
 
     $('.navigation__item').click(function () {
@@ -69,8 +72,10 @@ $(document).ready(function() {
     });
 
     // pagescroll2id
-    $(".navigation a").mPageScroll2id({
-        offset: 65
+    $(".navigation a, .back-to-top").mPageScroll2id({
+        offset: 65,
+        highlightClass: "navigation__link--active",
+        forceSingleHighlight: true
     });
 
     // sticky nav bar
@@ -79,5 +84,16 @@ $(document).ready(function() {
     var $window = $(window);
     $window.scroll(function() {
         $nav.toggleClass('header__navigation--sticky', $window.scrollTop() > navTopPos);
+    });
+
+    // hide menu on scroll
+    var currWindowPos = 0;
+    $window.scroll(function() {
+        if ($headerNav.hasClass("header__navigation--sticky") &&
+            !$button.hasClass('navigation__button--active')) {
+            $headerNav.toggleClass("header__navigation--hide",
+                $window.scrollTop() > currWindowPos);
+        }
+        currWindowPos = $window.scrollTop();
     });
 });
