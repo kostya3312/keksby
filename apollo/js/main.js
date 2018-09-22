@@ -13,6 +13,7 @@ $(document).ready(function() {
         });
         $(this).toggleClass('navigation__button--active');
         $headerNav.toggleClass('header__navigation--active');
+        $('.back-to-top').toggle();
     });
 
     $('.navigation__item').click(function () {
@@ -89,7 +90,7 @@ $(document).ready(function() {
     // hide menu on scroll
     var currWindowPos = 0;
     $window.scroll(function() {
-        if ($headerNav.hasClass("header__navigation--sticky") &&
+        if ($window.width() < 992 && $headerNav.hasClass("header__navigation--sticky") &&
             !$button.hasClass('navigation__button--active')) {
             $headerNav.toggleClass("header__navigation--hide",
                 $window.scrollTop() > currWindowPos);

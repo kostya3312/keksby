@@ -132,12 +132,11 @@ body {
       padding: 50px 0; } }
 
 .header__navigation {
-  background-color: #2a496d;
   transition: margin-top .8s; }
   @media (min-width: 992px) {
     .header__navigation {
       background-color: #38383a; } }
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     .header__navigation .container {
       width: 100%;
       padding: 0;
@@ -147,9 +146,18 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   position: fixed;
   z-index: 1000;
   box-shadow: 3px 4px 10px #38383a; }
+  @media (min-width: 991px) {
+    .header__navigation--sticky {
+      bottom: auto; } }
+  .header__navigation--sticky .container {
+    height: 100%; }
+    @media (min-width: 991px) {
+      .header__navigation--sticky .container {
+        height: auto; } }
 
 .header__navigation--active {
   box-shadow: 3px 4px 10px #2a496d; }
@@ -392,20 +400,20 @@ body {
       font-size: 16px;
       letter-spacing: 10px; } }
 
-.navigation {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999; }
-  @media (min-width: 992px) {
-    .navigation {
-      position: static;
-      box-shadow: none; } }
+.header__navigation--sticky .navigation {
+  height: 100%; }
+
+@media (min-width: 992px) {
+  .navigation {
+    position: static;
+    box-shadow: none;
+    height: auto; } }
 
 .navigation__list {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  background-color: transparent;
   list-style-type: none;
   font-weight: 700;
   line-height: 1;
@@ -413,14 +421,17 @@ body {
   letter-spacing: 4px;
   margin: 0;
   padding: 0;
-  background-color: #35577d; }
+  height: 100%;
+  overflow-y: auto; }
   @media (min-width: 992px) {
     .navigation__list {
+      height: auto;
       display: flex;
       flex-direction: row;
-      background-color: transparent; } }
+      justify-content: space-between; } }
 
 .navigation__item {
+  background-color: #35577c;
   border-top: 2px solid #496d95; }
   .navigation__item:hover .navigation__link, .navigation__item:active .navigation__link, .navigation__item:focus .navigation__link {
     color: #ffcc00;
@@ -429,6 +440,7 @@ body {
     border: none; }
   @media (min-width: 992px) {
     .navigation__item {
+      background-color: #38383a;
       border: none; } }
 
 .navigation__link {
@@ -613,7 +625,7 @@ body {
   background-color: rgba(22, 56, 95, 0.8);
   border-radius: 20px;
   transition: all .3s;
-  z-index: 1000; }
+  z-index: 10000; }
   .back-to-top.navigation__link--active {
     opacity: 0;
     margin-bottom: 0; }
